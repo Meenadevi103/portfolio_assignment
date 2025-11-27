@@ -1,0 +1,115 @@
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f6f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  animation: fadeIn 1s ease-out;
+  position: relative;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: slideUp 1s ease-out 0.2s backwards;
+}
+
+.message {
+  text-align: center;
+  color: #383838;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  animation: slideUp 1s ease-out 0.3s backwards;
+}
+
+.email {
+  color: #2955ba;
+  margin-left: 4px;
+  text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  gap: 1.2rem;
+  animation: slideUp 1s ease-out 0.4s backwards;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 3rem;
+  border-radius: 6px;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  resize: none;
+  outline: none;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  width: 100%;
+  background: #0838a8;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 1.15rem;
+  letter-spacing: 0.1em;
+  border: none;
+  padding: 1rem 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submitBtn:hover {
+  background: #202a49;
+}
+
+.socialBar {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 20;
+  align-items: center;
+  animation: slideInRight 1s ease-out;
+}
+
+.socialBar a {
+  color: #2955ba;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.socialBar a:hover {
+  background: #2955ba;
+  color: #fff;
+  transform: translateX(-5px);
+}
+
+@media screen and (max-width: 830px) {
+  .socialBar {
+    position: static;
+    flex-direction: row;
+    transform: none;
+    margin-top: 2rem;
+  }
+}

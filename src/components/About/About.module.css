@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 4rem 0;
+  animation: fadeIn 1s ease-out;
+}
+
+.left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  animation: slideUp 1s ease-out 0.2s backwards;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  animation: slideUp 1s ease-out 0.4s backwards;
+}
+
+.cvButton {
+  background: #635bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.cvButton:hover {
+  background: #4736f6;
+}
+
+.left {
+  flex: 1;
+  min-width: 320px;
+  padding-left: 140px;
+  /* Or use padding instead */
+}
+
+.right {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutImage {
+  width: 330px;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 44px 0 rgba(0, 0, 0, 0.16);
+  background: #111;
+  animation: slideInRight 1s ease-out;
+}
