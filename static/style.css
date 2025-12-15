@@ -5,7 +5,7 @@
     --color-text: #f3f4f6;
     --color-primary: #A78BFA;
     --color-secondary: #9CA3AF;
-    --color-background: #000000;
+    --color-background: #1f1f1f;
     --color-dark: #7C3AED;
     --font-roboto: 'Roboto', sans-serif;
     --font-outfit: 'Outfit', Arial, Helvetica, sans-serif;
@@ -133,11 +133,16 @@ html {
    =============================== */
 .hero-section {
     display: flex;
-    width: 100%;
-    min-height: 50vh;
+    width: auto;
+    margin: 20px 20px 0 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0c0c0c;
+    min-height: auto;
     position: relative;
     overflow: hidden;
-    background-color: var(--color-background);
+    padding-top: 80px;
+    /* Add padding for fixed navbar */
 }
 
 .hero-left {
@@ -243,9 +248,13 @@ html {
 
 .hero-image {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 80vh;
     object-fit: cover;
+    object-position: center;
+    /* Focus on the top part of the image (faces) */
     opacity: 0.7;
+
 }
 
 .social-sidebar {
@@ -296,19 +305,20 @@ html {
    About Section
    =============================== */
 .about-section {
-    padding: 80px 0;
+    padding: 60px 0;
+    margin: 20px;
     animation: fadeIn 1s ease-out;
-    background-color: #0a0a0a;
 }
 
 .about-left {
-    padding-left: 100px;
+    padding-left: 0;
 }
 
 .about-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2.5rem;
     color: #fff;
     animation: slideUp 1s ease-out 0.2s backwards;
 }
@@ -321,29 +331,30 @@ html {
     animation: slideUp 1s ease-out 0.4s backwards;
 }
 
-.cv-button {
-    background: #635bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+.btn-small-hero {
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
-    cursor: pointer;
-    transition: background 0.3s;
+    padding: 12px 30px;
     display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 1px solid #fff;
+    margin-top: 10px;
 }
 
-.cv-button:hover {
-    background: #4736f6;
+.btn-small-hero:hover {
+    background-color: transparent;
     color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-.about-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* .about-right removed to prevent centering conflict with education timeline */
 
 .about-image {
     width: 330px;
@@ -355,12 +366,33 @@ html {
     animation: slideInRight 1s ease-out;
 }
 
+.info-box {
+    background: #0c0c0c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 40px;
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 /* ===============================
    Skills Section
    =============================== */
 .skills-section {
     padding: 60px 20px;
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0c0c0c;
     animation: fadeIn 1s ease-out;
+    overflow: hidden;
 }
 
 .skills-title {
@@ -439,13 +471,18 @@ html {
    =============================== */
 .projects-section {
     padding: 76px 10%;
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0c0c0c;
     animation: fadeIn 1s ease-out;
-    background-color: #0a0a0a;
+    overflow: hidden;
 }
 
 .projects-title {
-    font-size: 35px;
+    font-size: 2.2rem;
     font-weight: 700;
+    text-align: center;
     letter-spacing: 1.75px;
     text-transform: uppercase;
     margin-bottom: 37px;
@@ -554,20 +591,24 @@ html {
    Contact Section
    =============================== */
 .contact-section {
-    width: 100%;
-    min-height: 100vh;
-    background: #000;
+    width: auto;
+    min-height: 80vh;
+    margin: 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0c0c0c;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 80px 20px;
     animation: fadeIn 1s ease-out;
     position: relative;
+    overflow: hidden;
 }
 
 .contact-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.2rem;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 0.5rem;
     color: #fff;
@@ -584,7 +625,7 @@ html {
 
 .contact-message a {
     color: #6366f1;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .contact-form {
@@ -661,6 +702,7 @@ html {
     font-size: 24px;
     transition: background 0.2s, color 0.2s, transform 0.2s;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
 .social-bar a:hover {
@@ -681,6 +723,7 @@ html {
         flex-direction: column;
         height: auto;
         min-height: auto;
+        padding-bottom: 40px;
     }
 
     .hero-left {
@@ -698,8 +741,10 @@ html {
 
     .hero-right {
         order: 1;
-        min-height: 400px;
-        width: 100%;
+        height: 30px;
+        width: 90%;
+        margin: 30px auto 0;
+        border-radius: 20px;
     }
 
     .social-sidebar {
@@ -819,99 +864,107 @@ html {
 }
 
 /* ===============================
-   Education Timeline & Separator
+   Education Timeline & Separator (Card Style)
    =============================== */
 .about-right {
     display: block !important;
     position: relative;
-    padding-left: 3rem;
-    border-left: 1px solid #374151;
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
 }
 
 .education-title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
     margin-bottom: 2rem;
     color: #fff;
+    text-align: left;
+    padding-left: 10px;
 }
 
 /* Timeline Styles */
 .timeline {
     position: relative;
-    padding-left: 10px;
+    padding-left: 0;
 }
 
-/* Vertical Line */
+/* Vertical Line - Removed */
 .timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    height: 100%;
-    width: 2px;
-    background-color: #374151;
+    display: none;
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    background: #111;
+    /* Dark card background */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    background: #161616;
 }
 
 .timeline-item:last-child {
     margin-bottom: 0;
 }
 
+/* Timeline Dot - Removed */
 .timeline-dot {
-    position: absolute;
-    left: -5px;
-    top: 5px;
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border: 2px solid #000;
-    border-radius: 50%;
-    z-index: 1;
+    display: none;
 }
 
 .timeline-content {
     position: relative;
+    border-left: 3px solid var(--color-primary);
+    padding-left: 20px;
 }
 
 .timeline-date {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #9ca3af;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .timeline-degree {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .timeline-school {
     font-size: 1rem;
     color: #d1d5db;
     margin: 0;
+    line-height: 1.6;
 }
 
 .timeline-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
+    gap: 15px;
+    margin-bottom: 8px;
 }
 
 .grade-badge {
-    background-color: #fff;
-    color: #000;
-    padding: 2px 8px;
-    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 6px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive adjustments for Timeline */
@@ -920,9 +973,10 @@ html {
         border-left: none;
         padding-left: 0;
         margin-top: 40px;
+        padding-right: 0;
     }
 
     .timeline::before {
-        left: 0;
+        display: none;
     }
 }

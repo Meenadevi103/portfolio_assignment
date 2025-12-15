@@ -84,9 +84,9 @@
             <a href="mailto:meenadeviravikumar@gmail.com" class="social-icon">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <!-- <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-icon">
                 <i class="fab fa-twitter"></i>
-            </a>
+            </a> -->
             <a href="https://www.instagram.com/_me_e_na__?igsh=YTgxZHo4ZzN6cmVl" target="_blank"
                 rel="noopener noreferrer" class="social-icon">
                 <i class="fab fa-instagram"></i>
@@ -104,51 +104,62 @@
             <div class="row">
                 <!-- Left Column: About Me -->
                 <div class="col-lg-6 about-left">
-                    <h2 class="about-title">About me</h2>
-                    <p class="about-description">
-                        I am an MCA first-year student passionate about web development.
-                        I enjoy building responsive sites and learning new technologies.
-                    </p>
-                    <a href="{{ url_for('static', filename='resume.pdf') }}" download class="cv-button">Download CV</a>
+                    <div class="info-box">
+                        <h2 class="about-title">About me</h2>
+                        <p class="about-description">
+                            I am a passionate MCA student and aspiring full-stack web developer with hands-on experience
+                            in building web applications using modern technologies. I enjoy learning new tools, solving
+                            real-world problems, and continuously improving my technical and creative skills. I have
+                            experience working with both frontend and backend development, and I am comfortable building
+                            responsive, user-friendly interfaces. I am a quick learner, a team player, and I enjoy
+                            turning ideas into functional digital solutions. I am eager to gain real-world industry
+                            experience and contribute to meaningful projects while growing as a software professional.
+                        </p>
+                        <a href="{{ url_for('static', filename='resume.pdf') }}" download
+                            class="btn-small-hero">Download
+                            CV</a>
+                    </div>
                 </div>
 
                 <!-- Right Column: Education Timeline -->
                 <div class="col-lg-6 about-right" id="education">
-                    <h3 class="education-title">Education</h3>
-                    <div class="timeline">
-                        <!-- MCA -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2025 - Present</div>
-                                <h4 class="timeline-degree">MCA</h4>
-                                <p class="timeline-school">Rajagiri College of Social Sciences, Kalamassery</p>
-                            </div>
-                        </div>
-
-                        <!-- BCA -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <div class="timeline-date">2022 - 2025</div>
-                                    <span class="grade-badge">81.3%</span>
+                    <div class="info-box">
+                        <h3 class="education-title">Education</h3>
+                        <div class="timeline">
+                            <!-- MCA -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2025 - Present</div>
+                                    <h4 class="timeline-degree">MCA</h4>
+                                    <p class="timeline-school">Rajagiri College of Social Sciences, Kalamassery</p>
                                 </div>
-                                <h4 class="timeline-degree">BCA</h4>
-                                <p class="timeline-school">Nirmala College, Muvattupuzha</p>
                             </div>
-                        </div>
 
-                        <!-- Higher Secondary -->
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-header">
-                                    <div class="timeline-date">Higher Secondary</div>
-                                    <span class="grade-badge">94.5%</span>
+                            <!-- BCA -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <div class="timeline-date">2022 - 2025</div>
+                                        <span class="grade-badge">81.3%</span>
+                                    </div>
+                                    <h4 class="timeline-degree">BCA</h4>
+                                    <p class="timeline-school">Nirmala College, Muvattupuzha</p>
                                 </div>
-                                <h4 class="timeline-degree">12th Grade</h4>
-                                <p class="timeline-school">St. Mary's HSS, Murickassery</p>
+                            </div>
+
+                            <!-- Higher Secondary -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <div class="timeline-date">Higher Secondary</div>
+                                        <span class="grade-badge">94.5%</span>
+                                    </div>
+                                    <h4 class="timeline-degree">12th Grade</h4>
+                                    <p class="timeline-school">St. Mary's HSS, Murickassery</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,7 +174,7 @@
             <h2 class="skills-title">Skills</h2>
             <div class="skills-grid">
                 <!-- React -->
-                <div class="skill-card">
+                <!-- <div class="skill-card">
                     <img src="{{ url_for('static', filename='assets/atom.png') }}" alt="React" class="skill-icon">
                     <div class="skill-name">React</div>
                     <div class="skill-rating">
@@ -174,7 +185,7 @@
                         <span class="dot"></span>
                         <span class="dot-inactive"></span>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Java -->
                 <div class="skill-card">
@@ -379,11 +390,11 @@
         </form>
 
         <div class="social-bar">
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-twitter"></i>
             </a>
             <a href="https://pinterest.com/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-pinterest-p"></i> -->
             </a>
             <a href="https://www.instagram.com/_me_e_na__?igsh=YTgxZHo4ZzN6cmVl" target="_blank"
                 rel="noopener noreferrer">
